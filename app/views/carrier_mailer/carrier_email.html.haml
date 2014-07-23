@@ -1,0 +1,18 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+  %body
+    %h1
+      Welcome to Snapdeal, #{@carrier.firstname}
+    %p
+      Your resume have successfully uploaded to Snapdeal.com,
+      %br/
+      Your Email Id is: #{@carrier.email}.
+      %br/
+      City: #{@carrier.city}
+    %p
+      To login to the site, just follow this link: #{@url}.
+    %p
+      To download the resume, just follow this link: #{link_to "download resume", "http://0.0.0.0:3000/#{@carrier.resume_url}"}
+    %p Thanks for joining and have a great day!

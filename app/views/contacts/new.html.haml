@@ -1,0 +1,9 @@
+%h1 Contact
+= simple_form_for @contact do |f|
+  %p
+    = f.input :name
+  %p
+    = f.input :email
+  %p
+    = f.input :message, as: :text
+  = f.submit

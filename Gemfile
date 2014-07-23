@@ -17,7 +17,8 @@ gem 'simple_form'
 gem 'country_select'
 gem 'quiet_assets', group: :development
 gem 'carrierwave'
-
+gem 'haml-rails'
+gem 'erb2haml'
 
 
 group :development, :test do

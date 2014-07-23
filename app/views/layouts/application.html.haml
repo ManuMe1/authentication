@@ -1,0 +1,28 @@
+!!!
+%html{:lang => "en"}
+  %head
+    %meta{:charset => "utf-8"}/
+    %meta{:content => "IE=Edge,chrome=1", "http-equiv" => "X-UA-Compatible"}/
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
+    %title= content_for?(:title) ? yield(:title) : "Snapdeal"
+    = csrf_meta_tags
+    = render "layouts/shim"
+    = stylesheet_link_tag "application", :media => "all"
+    = render 'layouts/devises'
+    = favicon_link_tag 'favicon.ico', :rel => 'shortcut icon'
+    = javascript_include_tag "application"
+  %body
+    %header
+      = render "layouts/navbar"
+    .container-fluid
+      .row-fluid
+        .span1
+        / /span
+        .span10
+          = bootstrap_flash
+          = yield
+        .span1
+      / /row
+    / /container
+    %footer
+      = render "layouts/footer"

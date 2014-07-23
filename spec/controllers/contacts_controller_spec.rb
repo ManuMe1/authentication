@@ -1,24 +1,24 @@
 require 'rails_helper'
 
-RSpec.describe WelcomeController, :type => :controller do
+RSpec.describe ContactsController, :type => :controller do
 
-  describe "GET index" do
+  describe "GET new" do
     it "returns http success" do
-      get :index
+      get :new
       expect(response).to be_success
     end
   end
 
-  describe "GET about" do
+  describe "GET create" do
     it "returns http success" do
-      get :about
+      get :create
       expect(response).to be_success
     end
   end
 
-  describe "GET contact" do
+  describe "GET show" do
     it "returns http success" do
-      get :contact
+      get :show
       expect(response).to be_success
     end
   end
