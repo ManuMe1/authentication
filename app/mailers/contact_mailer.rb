@@ -3,8 +3,8 @@ class ContactMailer < ActionMailer::Base
  
   def contact_email(contact)
     @contact = contact
-    @url  = 'http://samsunng.com/message'
+    @url  = 'http://www.snapdeal.com/login'
     @to = 'shemi.ideology@gmail.com'
-    mail(to: @to, subject: 'Welcome to My Awesome Site')
+    mail(to: @to, subject: 'Snapdeal')
   end
 end

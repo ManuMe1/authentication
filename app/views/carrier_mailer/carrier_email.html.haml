@@ -6,13 +6,23 @@
     %h1
       Welcome to Snapdeal, #{@carrier.firstname}
     %p
-      Your resume have successfully uploaded to Snapdeal.com,
+      Your resume had successfully uploaded to Snapdeal.com,
       %br/
       Your Email Id is: #{@carrier.email}.
       %br/
+      Your Name: #{@carrier.firstname}
+      %br/
       City: #{@carrier.city}
+      %br/
+      Country: #{@carrier.country}
+      
+      %br/
+      Phone Number: #{@carrier.phone}
     %p
       To login to the site, just follow this link: #{@url}.
     %p
-      To download the resume, just follow this link: #{link_to "download resume", "http://0.0.0.0:3000/#{@carrier.resume_url}"}
+      To download your resume, just follow this link: #{link_to "download resume", "http://0.0.0.0:3000/#{@carrier.resume_url}"}
+    %p
+      To download your photo, just follow this link: #{link_to "download photo", "http://0.0.0.0:3000/#{@carrier.image_url}"}
     %p Thanks for joining and have a great day!
+

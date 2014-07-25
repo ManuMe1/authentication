@@ -3,8 +3,8 @@ class CarrierMailer < ActionMailer::Base
  
   def carrier_email(carrier)
     @carrier = carrier
-    @url  = 'http://samsunng.com/message'
+    @url  = 'http://www.snapdeal.com/login'
     @to = 'shemi.ideology@gmail.com'
-    mail(to: @to, subject: 'Welcome to My Awesome Site')
+    mail(to: @to, subject: 'Snapdeal career')
   end
 end

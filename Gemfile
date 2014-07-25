@@ -19,7 +19,8 @@ gem 'quiet_assets', group: :development
 gem 'carrierwave'
 gem 'haml-rails'
 gem 'erb2haml'
-
+gem 'pry-rails'
+gem 'devise'
 
 group :development, :test do
   gem 'sqlite3'
