@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   
 
+  resources :portfolios
+
   devise_for :users
   get 'carriers/new'
 
@@ -8,8 +10,8 @@ Rails.application.routes.draw do
 
   get 'welcome/index'
 
-  get 'welcome/about'
-
+  #get 'welcome/about'
+   get '/about-us' => 'welcome#about'
   get 'welcome/contact'
 
   get 'home/index'

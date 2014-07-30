@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140725051542) do
+ActiveRecord::Schema.define(version: 20140730083704) do
 
   create_table "carriers", force: true do |t|
     t.string   "firstname"
@@ -33,6 +33,17 @@ ActiveRecord::Schema.define(version: 20140725051542) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "portfolios", force: true do |t|
+    t.string   "name"
+    t.string   "description"
+    t.string   "pimage"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "portfolios", ["user_id"], name: "index_portfolios_on_user_id"
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false

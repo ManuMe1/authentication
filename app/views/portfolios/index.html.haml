@@ -1,0 +1,11 @@
+%h1 Listing portfolios
+= link_to 'New Portfolio', new_portfolio_path
+- @portfolios.each do |portfolio|
+ 
+  .span3
+    =portfolio.name
+    = link_to image_tag(portfolio.pimage_url), portfolio
+
+ 
+
+
