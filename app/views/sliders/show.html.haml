@@ -1,0 +1,24 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @slider.name
+
+%p
+  
+  =image_tag @slider.sliderimage_url
+%p
+  %b Description:
+  = @slider.description
+
+- if signed_in?
+  = link_to 'Edit', edit_slider_path(@slider)
+  \|
+  = link_to 'Back', sliders_path
+  \|
+  = link_to 'Destroy', @slider, :method => :delete, :data => { :confirm => 'Are you sure?' }
+- else
+  = link_to 'Back', sliders_path
+
+
+

@@ -1,0 +1,32 @@
+#carousel-example-generic.carousel.slide{"data-ride" => "carousel"}
+  / Indicators
+  %ol.carousel-indicators
+    %li.active{"data-slide-to" => "0", "data-target" => "#carousel-example-generic"}
+    %li{"data-slide-to" => "1", "data-target" => "#carousel-example-generic"}
+    %li{"data-slide-to" => "2", "data-target" => "#carousel-example-generic"}
+  / Wrapper for slides
+  .carousel-inner
+    
+    .item.active
+      =image_tag "download1.jpg"
+      .carousel-caption
+        Sample
+    - @sliders.each do |slider|
+      .item
+        =image_tag slider.sliderimage_url
+        .carousel-caption
+          - if signed_in?
+            = link_to 'Edit', edit_slider_path(slider)
+            \|
+            
+            = link_to 'Destroy', slider, method: :delete, :data => { :confirm => 'Are you sure?' }
+          
+          = link_to 'show', slider_path(slider)
+      
+
+    \...
+  / Controls
+  %a.left.carousel-control{"data-slide" => "prev", href: "#carousel-example-generic", role: "button"}
+    %span.glyphicon.glyphicon-chevron-left
+  %a.right.carousel-control{"data-slide" => "next", href: "#carousel-example-generic", role: "button"}
+    %span.glyphicon.glyphicon-chevron-right

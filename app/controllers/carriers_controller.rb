@@ -13,7 +13,7 @@ class CarriersController < ApplicationController
         # Tell the UserMailer to send a welcome email after save
         CarrierMailer.carrier_email(@carrier).deliver
  
-        format.html { render action: 'new', notice: "Resume was successfully uploaded" }
+        format.html { redirect_to(new_carrier_path, notice: 'Resume has been successfully uploaded.') }
         format.json { render json: @carrier, status: :created, location: @carrier }
       else
         format.html { render action: 'new' }

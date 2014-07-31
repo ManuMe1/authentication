@@ -1,22 +1,33 @@
 %h1 Work with Snapdeal
-%p
-  Be a part of an organization that pioneers in new technologies and take your career to new heights. If you are passionate about technology and love to challenge your abilities, Ideology is the place to be in. Beginner, experienced, seasoned professional – wherever you are in your career journey, we provide you with a plethora of opportunities to grow, and excel. We are expanding rapidly and we have an enviable list of clients, global leaders, in our portfolio. If you believe and have the right attitude and vision with passion, kindly contact us
-%h3 Resume
-= simple_form_for @carrier, url: carriers_path do |f|
-  %p
-    = f.input :firstname
-  %p
-    = f.input :lastname
-  %p
-    = f.input :city
-  %p
-    = f.input :country
-  %p
-    = f.input :email
-  %p
-    = f.input :phone
-  %p
-    = f.input :resume, as: :file
-  %p
-    = f.input :image, as: :file
-  = f.submit:"Send Resume",class:"btn btn-success"
+%br
+.row-fluid.bg
+  .span1
+  .span5
+    %br
+    %br
+    %br
+    %p
+      Be a part of an organization that pioneers in new technologies and take your career to new heights. If you are passionate about technology and love to challenge your abilities, Ideology is the place to be in. Beginner, experienced, seasoned professional – wherever you are in your career journey, we provide you with a plethora of opportunities to grow, and excel. We are expanding rapidly and we have an enviable list of clients, global leaders, in our portfolio. If you believe and have the right attitude and vision with passion, kindly contact us
+  .span4
+    %h3 Resume
+    = simple_form_for @carrier, url: carriers_path do |f|
+      %p
+        = f.input :firstname
+      %p
+        = f.input :lastname
+      %p
+        = f.input :city
+      %p
+        = f.input :country
+      %p
+        = f.input :email
+      %p
+        = f.input :phone
+      %p
+        = f.input :resume, as: :file
+      %p
+        = f.input :image, as: :file
+      = f.submit:"Send Resume",class:"btn btn-success"
+      %br
+      %br
+

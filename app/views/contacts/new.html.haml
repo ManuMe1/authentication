@@ -1,9 +1,21 @@
-%h1 Contact
-= simple_form_for @contact do |f|
-  %p
-    = f.input :name
-  %p
-    = f.input :email
-  %p
-    = f.input :message, as: :text
-  = f.submit
+%h1 Contact Us
+.row-fluid.bg
+  .span1
+  .span5
+    %br
+    %br
+    %h6 Snapdeal Pvt Ltd
+    %p 11/12 Neptune Court
+    %p Mumbai
+    %p Email : info@snapdeal.com
+    %p Tel : +1 617-500-8459
+    %p Fax : +1 617-500-8990
+  .span4
+    = simple_form_for @contact do |f|
+      %p
+        = f.input :name
+      %p
+        = f.input :email
+      %p
+        = f.input :message, as: :text
+      = f.submit:"Submit",class:"btn btn-success"

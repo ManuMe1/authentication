@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
   
 
+  resources :sliders
+
+  get 'home/index'
+
   resources :portfolios
 
   devise_for :users
@@ -14,7 +18,7 @@ Rails.application.routes.draw do
    get '/about-us' => 'welcome#about'
   get 'welcome/contact'
 
-  get 'home/index'
+  
 
  resources :contacts,only: [:new,:create,:show]
  resources :carriers,only: [:new,:create]
