@@ -21,6 +21,8 @@ gem 'haml-rails'
 gem 'erb2haml'
 gem 'pry-rails'
 gem 'devise'
+gem 'mini_magick'
+gem 'pg'
 
 group :development, :test do
   gem 'sqlite3'

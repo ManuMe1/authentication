@@ -1,15 +1,15 @@
 %p#notice= notice
 
 %p
-  %b Name:
-  = @portfolio.name
+  %b 
+    = @portfolio.name
 
 %p
   
   =image_tag @portfolio.pimage_url
-%p
-  %b Description:
-  = @portfolio.description
+%p.bg
+  %b 
+    = @portfolio.description
 
 - if signed_in?
   = link_to 'Edit', edit_portfolio_path(@portfolio)
